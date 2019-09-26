@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>git 简明指南 | Ankkaya Blog</title>
+    <meta name="description" content="记录 分享 总结 自我提升">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.32133ca3.css" as="style"><link rel="preload" href="/assets/js/app.2b828677.js" as="script"><link rel="preload" href="/assets/js/2.b0a3eb18.js" as="script"><link rel="preload" href="/assets/js/6.af74faa0.js" as="script"><link rel="prefetch" href="/assets/js/3.17c6b6a1.js"><link rel="prefetch" href="/assets/js/4.8086b9ca.js"><link rel="prefetch" href="/assets/js/5.6b91ce50.js"><link rel="prefetch" href="/assets/js/7.c6f1865f.js"><link rel="prefetch" href="/assets/js/8.b6d9c302.js"><link rel="prefetch" href="/assets/js/9.6713b258.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.32133ca3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Ankkaya Blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">linux常用命令</a></li><li class="dropdown-item"><!----> <a href="/javas/" class="nav-link">javascript核心概念</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link router-link-exact-active router-link-active">git简明指南</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">分类</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link">linux常用命令</a></li><li class="dropdown-item"><!----> <a href="/javas/" class="nav-link">javascript核心概念</a></li><li class="dropdown-item"><!----> <a href="/git/" class="nav-link router-link-exact-active router-link-active">git简明指南</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/git/" class="active sidebar-link">git 简明指南</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/git/#基本配置" class="sidebar-link">基本配置</a></li><li class="sidebar-sub-header"><a href="/git/#仓库操作" class="sidebar-link">仓库操作</a></li><li class="sidebar-sub-header"><a href="/git/#分支操作" class="sidebar-link">分支操作</a></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git-简明指南"><a href="#git-简明指南" aria-hidden="true" class="header-anchor">#</a> git 简明指南</h1> <h2 id="基本配置"><a href="#基本配置" aria-hidden="true" class="header-anchor">#</a> 基本配置</h2> <p>注册 github 账号, 创建仓库. 本地安装 github 命令行工具 gitbash <a href="https://www.git-scm.com/download/win" target="_blank" rel="noopener noreferrer">下载<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>, 本地环境绑定你的 github 账号信息</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>$ <span class="token function">git</span> config ——global user.name <span class="token string">&quot;name&quot;</span>
+$ <span class="token function">git</span> config ——global user.email <span class="token string">&quot;email&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>设置 SSH Key,首先在 gitbash 输入</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">ls</span> -al ~/.ssh
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>看看是否有 id_rsa.pub 这个文件, 如果没有, 则需要创建新的 SSH 秘钥</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code>$ ssh-keygen -t rsa -C <span class="token string">&quot;注册的 github 邮箱&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>生成完成后, 打开 id_rsa.pub 文件, 复制对应内容到 github <em>Setting-&gt;SSH and GPG keys-&gt;New SSH Key</em> 中</p> <p>基本配置完成</p> <h2 id="仓库操作"><a href="#仓库操作" aria-hidden="true" class="header-anchor">#</a> 仓库操作</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">git</span> init <span class="token comment"># 本地仓库初始化</span>
+
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:Ankkaya/testgit.git <span class="token comment"># 添加远程项目到本地仓库</span>
+
+<span class="token function">git</span> pull <span class="token comment"># 下载项目到本地</span>
+
+<span class="token function">git</span> status <span class="token comment"># 查看本地文件修改状态</span>
+
+<span class="token function">git</span> <span class="token function">add</span> <span class="token keyword">.</span> <span class="token comment"># 添加文件 (&quot;.&quot; 为添加所有改动的文件)</span>
+
+<span class="token function">git</span> reset <span class="token comment"># 取消添加文件</span>
+
+<span class="token function">git</span> commit -m <span class="token string">&quot;msg&quot;</span> <span class="token comment"># 提交 (&quot;msg&quot; 本次变动内容)</span>
+
+<span class="token function">git</span> push <span class="token comment"># 提交到远程仓库</span>
+
+<span class="token function">git</span> remote -v <span class="token comment"># 查看本地关联远程仓库地址</span>
+
+<span class="token function">git</span> remote <span class="token function">rm</span> github <span class="token comment"># 移除远程仓库</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><h2 id="分支操作"><a href="#分支操作" aria-hidden="true" class="header-anchor">#</a> 分支操作</h2> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">git</span> branch dev <span class="token comment"># 创建分支 dev</span>
+ 
+<span class="token function">git</span> checkout -b dev <span class="token comment"># 创建并切换到分支 dev</span>
+
+<span class="token function">git</span> pull origin <span class="token operator">&lt;</span>远程分支<span class="token operator">&gt;</span> <span class="token comment"># 关联远程分支</span>
+
+<span class="token function">git</span> checkout master <span class="token comment"># 分支切换 master</span>
+
+<span class="token function">git</span> branch <span class="token comment"># 查看所有分支</span>
+
+<span class="token function">git</span> branch -D <span class="token operator">&lt;</span>本地分支<span class="token operator">&gt;</span> <span class="token comment"># 删除本地分支</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/17/2019, 11:40:21 AM</span></div></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.2b828677.js" defer></script><script src="/assets/js/2.b0a3eb18.js" defer></script><script src="/assets/js/6.af74faa0.js" defer></script>
+  </body>
+</html>
